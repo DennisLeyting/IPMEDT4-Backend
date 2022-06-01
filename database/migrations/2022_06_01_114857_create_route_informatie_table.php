@@ -20,7 +20,7 @@ class CreateRouteInformatieTable extends Migration
             $table->string('lang + lati'); //coordinaten
             $table->string('eindpunt'); //Ja of nee
         });
-    }
+    }//fdaslkd;fjasldfskjfas;ldfjl;sdkajfs JSDFLISJDFKL:SDJFLKSDJF:D:
 
     /**
      * Reverse the migrations.
