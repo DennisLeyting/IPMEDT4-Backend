@@ -17,6 +17,7 @@ class CreateActiviteitTable extends Migration
             $table->id('activiteitID');
             $table->string('soort_activiteit');
             $table->string('beschrijving');
+            $table->string('antwoord')->nullable()->default(NULL);
             $table->foreign('soort_activiteit')->references("naam")->on("soorten_activiteiten");
 
         });
