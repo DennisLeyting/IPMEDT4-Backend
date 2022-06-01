@@ -19,7 +19,11 @@ class CreateRoutesTable extends Migration
             $table->string('stad');
             $table->string('beginpunt'); //lang + lati?
             // $table->integer('radius');
-            // $table->string('moeilijkheidsniveau')
+            $table->string('moeilijkheidsniveau');
+
+            $table->foreign("creatorID")->references('id')->on("gebruiker");
+            $table->foreign('moeilijkheidsniveau')->references('niveau')->on("moeilijkheidsgraad");
+            
             
         });
     }
@@ -31,6 +35,14 @@ class CreateRoutesTable extends Migration
      */
     public function down()
     {
+        Schema::table('routes', function (Blueprint $table) {
+            $table->dropForeign('routes_creatorID_foreign');
+        });
+
+        Schema::table('routes', function (Blueprint $table) {
+            $table->dropForeign('routes_moeilijkheidsniveau_foreign');
+        });
+
         Schema::dropIfExists('routes');
     }
 }

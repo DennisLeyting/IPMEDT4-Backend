@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMoeilijkheidsgraadTable extends Migration
+class CreateSoortenActiviteitenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateMoeilijkheidsgraadTable extends Migration
      */
     public function up()
     {
-        Schema::create('moeilijkheidsgraad', function (Blueprint $table) {
-            $table->string('niveau');
+        Schema::create('soorten_activiteiten', function (Blueprint $table) {
+            $table->string('naam')->unique();
             $table->string('beschrijving');
         });
     }
@@ -26,6 +26,6 @@ class CreateMoeilijkheidsgraadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('moeilijkheidsgraad');
+        Schema::dropIfExists('soorten_activiteiten');
     }
 }
