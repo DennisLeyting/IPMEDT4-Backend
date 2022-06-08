@@ -14,7 +14,7 @@ class CreateGebruikerTable extends Migration
     public function up()
     {
         Schema::create('gebruiker', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->string('voornaam');
             $table->string('achternaam');
             $table->string('email');

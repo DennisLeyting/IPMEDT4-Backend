@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRouteInformatieTable extends Migration
+class CreateCheckpointsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateRouteInformatieTable extends Migration
      */
     public function up()
     {
-        Schema::create('route_informatie', function (Blueprint $table) {
-            $table->id();
+        Schema::create('checkpoints', function (Blueprint $table) {
+            $table->id('id');
             $table->unsignedBigInteger('routenummer');
             $table->string('checkpointnummer');
             $table->string('lang + lati'); //coordinaten
@@ -33,14 +33,14 @@ class CreateRouteInformatieTable extends Migration
      */
     public function down()
     {
-        Schema::table('route_informatie', function (Blueprint $table) {
-            $table->dropForeign('route_informatie_routenummer_foreign');
+        Schema::table('checkpoints', function (Blueprint $table) {
+            $table->dropForeign('checkpoints_routenummer_foreign');
         });
 
-        Schema::table('route_informatie', function (Blueprint $table) {
-            $table->dropForeign('route_informatie_activiteitID_foreign');
+        Schema::table('checkpoints', function (Blueprint $table) {
+            $table->dropForeign('checkpoints_activiteitID_foreign');
         });
 
-        Schema::dropIfExists('route_informatie');
+        Schema::dropIfExists('checkpoints');
     }
 }
