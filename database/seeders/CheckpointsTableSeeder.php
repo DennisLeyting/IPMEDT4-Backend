@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use DB;
 
 
-class RouteInformatieTableSeeder extends Seeder
+class Checkpoints extends Seeder
 {
     /**
      * Run the database seeds.
