@@ -7,13 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Checkpoints extends Model
 {
-    use HasFactory;
+    
+    protected $table = "checkpoints";
 
     public function WelkeActiviteit(){
-        return $this->belongsTo('\App\Models\Activiteit', 'activiteitID', 'activiteitID')
+        return $this->belongsTo('\App\Models\Activiteit', 'activiteitID', 'activiteitID');
     }
 
     public function WelkeRoute(){
-        return $this->belongsTo('\App\Models\Routes', 'routenummer', 'routenummer')
+        return $this->belongsTo('\App\Models\Routes', 'routenummer', 'routenummer');
     }
 }

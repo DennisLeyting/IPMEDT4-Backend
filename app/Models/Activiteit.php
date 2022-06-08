@@ -7,15 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Activiteit extends Model
 {
-    use HasFactory;
 
-    protected $table = "Activiteit";
+    protected $table = "activiteit";
 
     public function AllCheckpoints(){
-        return $this->hasMany('\App\Models\Checkpoints', 'activiteitID', 'activiteitID')
+        return $this->hasMany('\App\Models\Checkpoints', 'activiteitID', 'activiteitID');
     }
 
     public function ActiviteitSoort() {
-        return $this-belongsTo('\App\Models\soorten_activiteiten', 'soort_activiteit', 'naam')
+        return $this->belongsTo('\App\Models\Soortenactiviteiten', 'soort_activiteit', 'naam');
     }
 }

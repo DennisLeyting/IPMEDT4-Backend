@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             SoortenActiviteitenTableSeeder::class,
             RoutesTableSeeder::class,
             ActiviteitTableSeeder::class,
-            RouteInformatieTableSeeder::class,
+            // CheckpointsTableSeeder::class,
 
         ]);
     }
