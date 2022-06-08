@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Routes extends Model
 {
-    use HasFactory;
-
+    protected $table = "routes";
+    
     public function WelkeGebruiker(){
-        return $this->belongsTo('\App\Models\Routes', 'creatorID', 'id')
+        return $this->belongsTo('\App\Models\Routes', 'creatorID', 'id');
     }
 
     public function AllCheckpoints(){
-        return $this->hasMany('\App\Models\Checkpoints', 'routenummer', 'routenummer')
+        return $this->hasMany('\App\Models\Checkpoints', 'routenummer', 'routenummer');
     }
 
     public function WelkeMoeilijkheid(){
-        return $this->belongsTo('\App\Models\Routes', 'moeilijkheidsniveau', 'niveau')
+        return $this->belongsTo('\App\Models\Routes', 'moeilijkheidsniveau', 'niveau');
     }
 }

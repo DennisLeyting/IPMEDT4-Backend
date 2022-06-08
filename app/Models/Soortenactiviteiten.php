@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Soortenactiviteiten extends Model
 {
-    use HasFactory;
-
+    protected $table = "soorten_activiteiten";
+    
     public function AllActiviteiten(){
-        return $this->hasMany('\App\Models\Activiteit', 'soort_activiteit', 'naam')
+        return $this->hasMany('\App\Models\Activiteit', 'soort_activiteit', 'naam');
     }
 }
