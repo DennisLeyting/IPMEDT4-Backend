@@ -15,6 +15,12 @@ class RoutesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('moeilijkheidsgraad')->insert([
+            'routenummer' => '1',
+            'creatorID' => 'Dennis',
+            'stad' => 'Hoofddorp',
+            'Beginpunt' => 'Dirk Centrum',
+            'moeilijkheidsniveau' => '1'
+        ]);
     }
 }
