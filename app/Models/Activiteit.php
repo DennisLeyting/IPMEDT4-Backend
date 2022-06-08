@@ -12,10 +12,10 @@ class Activiteit extends Model
     protected $table = "Activiteit";
 
     public function AllCheckpoints(){
-        return $this->hasMany('\App\Models\Checkpoints', 'activiteitID', 'activiteitID')
+        return $this->hasMany('\App\Models\Checkpoints', 'activiteitID', 'activiteitID');
     }
 
     public function ActiviteitSoort() {
-        return $this-belongsTo('\App\Models\soorten_activiteiten', 'soort_activiteit', 'naam')
+        return $this-belongsTo('\App\Models\soorten_activiteiten', 'soort_activiteit', 'naam');
     }
 }

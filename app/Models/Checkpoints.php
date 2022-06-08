@@ -10,10 +10,10 @@ class Checkpoints extends Model
     use HasFactory;
 
     public function WelkeActiviteit(){
-        return $this->belongsTo('\App\Models\Activiteit', 'activiteitID', 'activiteitID')
+        return $this->belongsTo('\App\Models\Activiteit', 'activiteitID', 'activiteitID');
     }
 
     public function WelkeRoute(){
-        return $this->belongsTo('\App\Models\Routes', 'routenummer', 'routenummer')
+        return $this->belongsTo('\App\Models\Routes', 'routenummer', 'routenummer');
     }
 }

@@ -10,6 +10,6 @@ class Moeilijkheidsgraad extends Model
     use HasFactory;
 
     public function AllRoutes(){
-        return $this->hasMany('\App\Models\Activiteit', 'activiteitID', 'activiteitID')
+        return $this->hasMany('\App\Models\Activiteit', 'activiteitID', 'activiteitID');
     }
 }

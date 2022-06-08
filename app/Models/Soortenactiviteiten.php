@@ -10,6 +10,6 @@ class Soortenactiviteiten extends Model
     use HasFactory;
 
     public function AllActiviteiten(){
-        return $this->hasMany('\App\Models\Activiteit', 'soort_activiteit', 'naam')
+        return $this->hasMany('\App\Models\Activiteit', 'soort_activiteit', 'naam');
     }
 }

@@ -10,6 +10,6 @@ class Gebruiker extends Model
     use HasFactory;
 
     public function AllRoutes(){
-        return $this->hasMany('\App\Models\Routes', 'creatorID', 'id')
+        return $this->hasMany('\App\Models\Routes', 'creatorID', 'id');
     }
 }
