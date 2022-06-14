@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gebruiker extends Model
 {
-    use HasFactory;
+    protected $table = "gebruiker";
 
     public function AllRoutes(){
         return $this->hasMany('\App\Models\Routes', 'creatorID', 'id');

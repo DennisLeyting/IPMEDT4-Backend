@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Moeilijkheidsgraad extends Model
 {
-    use HasFactory;
+    protected $table = "moeilijkheidsgraad";
 
     public function AllRoutes(){
         return $this->hasMany('\App\Models\Activiteit', 'activiteitID', 'activiteitID');

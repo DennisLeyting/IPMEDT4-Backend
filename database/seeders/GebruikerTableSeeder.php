@@ -22,7 +22,7 @@ class GebruikerTableSeeder extends Seeder
             'woonplaats' => 'Den Haag']);
 
         DB::table('gebruiker')->insert([
-            'voornaam' => 'kimberly',
+            'voornaam' => 'Kimberly',
             'achternaam' => 'Szul',
             'email' => 's1121190@student.hsleiden.nl',
             'woonplaats' => 'Nieuw-Vennep']);
