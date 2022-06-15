@@ -26,9 +26,9 @@ use App\Http\Controllers\SoortenactiviteitenController;
 Route::get('/activiteit', [ActiviteitController::class, 'index']);
 Route::get('/checkpoints', [CheckpointsController::class, 'index']);
 Route::get('/gebruiker', [GebruikerController::class, 'index']);
-Route::get('/moeilijkheidsgraad', [MoeilijkheidsgraadController::class, 'index']);
+Route::get('/mg', [MoeilijkheidsgraadController::class, 'index']);
 Route::get('/routes', [RoutesController::class, 'index']);
-Route::get('/soortenactiviteiten', [SoortenactiviteitenController::class, 'index']);
+Route::get('/sa', [SoortenactiviteitenController::class, 'index']);
 
 Route::get('/{any}', function ($any) {
 
