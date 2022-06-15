@@ -3,6 +3,14 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\http\Controllers\ActiviteitController;
+use App\http\Controllers\CheckpointsController;
+use App\http\Controllers\GebruikerController;
+use App\http\Controllers\MoeilijkheidsgraadController;
+use App\http\Controllers\RoutesController;
+use App\http\Controllers\SoortenactiviteitController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
