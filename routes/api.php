@@ -3,12 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\http\Controllers\ActiviteitController;
-use App\http\Controllers\CheckpointsController;
-use App\http\Controllers\GebruikerController;
-use App\http\Controllers\MoeilijkheidsgraadController;
-use App\http\Controllers\RoutesController;
-use App\http\Controllers\SoortenactiviteitController;
+use App\Http\Controllers\ActiviteitController;
+use App\Http\Controllers\CheckpointsController;
+use App\Http\Controllers\GebruikerController;
+use App\Http\Controllers\MoeilijkheidsgraadController;
+use App\Http\Controllers\RoutesController;
+use App\Http\Controllers\SoortenactiviteitenController;
 
 
 /*
@@ -23,7 +23,12 @@ use App\http\Controllers\SoortenactiviteitController;
 */
 
 
-
+Route::get('/activiteit', [ActiviteitController::class, 'index']);
+Route::get('/checkpoints', [CheckpointsController::class, 'index']);
+Route::get('/gebruiker', [GebruikerController::class, 'index']);
+Route::get('/moeilijkheidsgraad', [MoeilijkheidsgraadController::class, 'index']);
+Route::get('/routes', [RoutesController::class, 'index']);
+Route::get('/soortenactiviteiten', [SoortenactiviteitenController::class, 'index']);
 
 Route::get('/{any}', function ($any) {
 
