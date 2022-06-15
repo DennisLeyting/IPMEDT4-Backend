@@ -8,5 +8,7 @@ use App\Models\Routes;
 
 class RoutesController extends Controller
 {
-    //
+    public function index(){
+        return Routes::all();
+    }
 }

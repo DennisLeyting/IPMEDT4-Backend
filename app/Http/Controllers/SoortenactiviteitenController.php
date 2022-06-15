@@ -8,5 +8,7 @@ use App\Models\Soortenactiviteiten;
 
 class SoortenactiviteitenController extends Controller
 {
-    //
+    public function index(){
+        return Soortenactiviteiten::all();
+    }
 }
