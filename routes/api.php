@@ -9,6 +9,7 @@ use App\Http\Controllers\GebruikerController;
 use App\Http\Controllers\MoeilijkheidsgraadController;
 use App\Http\Controllers\RoutesController;
 use App\Http\Controllers\SoortenactiviteitenController;
+use App\Http\Controllers\API\CommentController;
 
 
 /*
@@ -21,6 +22,8 @@ use App\Http\Controllers\SoortenactiviteitenController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::post('/add-comment', [CommentController::class, 'store']);
 
 
 Route::get('/activiteit', [ActiviteitController::class, 'index']);
