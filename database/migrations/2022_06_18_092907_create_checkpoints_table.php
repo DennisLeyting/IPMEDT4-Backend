@@ -15,15 +15,11 @@ class CreateCheckpointsTable extends Migration
     {
         Schema::create('checkpoints', function (Blueprint $table) {
             $table->string('routename');
-            $table->integer('pointnumber')->nullable();
-            $table->float('latitude');
-            $table->float('Longitude');
+            $table->string('pointnumber');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->string('activity_title');
-            $table->string('activity_header')->nullable();
-            $table->string('activity_awnser')->nullable();
-            $table->string('activity_false1')->nullable();
-            $table->string('activity_false2')->nullable();
-            $table->string('activity_false3')->nullable();
+            $table->string('activity_header');
         });
     }
 

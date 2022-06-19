@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ActiviteitController;
-use App\Http\Controllers\API\CheckpointController;
+use App\Http\Controllers\CheckpointController;
 use App\Http\Controllers\GebruikerController;
 use App\Http\Controllers\MoeilijkheidsgraadController;
 use App\Http\Controllers\RoutesController;
@@ -23,7 +23,7 @@ use App\Http\Controllers\SoortenactiviteitenController;
 */
 
 
-Route::post('/checkpoint', [CheckpointController::class, 'index']);
+Route::post('/create_checkpoint', 'App\Http\Controllers\CheckpointController@addCheckpoint');
 Route::get('/activiteit', [ActiviteitController::class, 'index']);
 Route::get('/gebruiker', [GebruikerController::class, 'index']);
 Route::get('/mg', [MoeilijkheidsgraadController::class, 'index']);
