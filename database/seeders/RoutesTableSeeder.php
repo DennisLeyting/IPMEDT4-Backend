@@ -16,11 +16,8 @@ class RoutesTableSeeder extends Seeder
     public function run()
     {
         DB::table('routes')->insert([
-            'routenummer' => '1',
-            'creatorID' => '1',
-            'stad' => 'Hoofddorp',
-            'Beginpunt' => 'Dirk Centrum',
-            'moeilijkheidsniveau' => '1'
+            'routename' => 'Hoofddorp',
+            'regio' => 'Centrum'
         ]);
     }
 }

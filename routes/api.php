@@ -24,9 +24,9 @@ use App\Http\Controllers\SoortenactiviteitenController;
 
 
 Route::post('/create_checkpoint', 'App\Http\Controllers\CheckpointController@addCheckpoint');
+Route::post('/create_route', 'App\Http\Controllers\RoutesController@addRoute');
 Route::get('/activiteit', [ActiviteitController::class, 'index']);
 Route::get('/gebruiker', [GebruikerController::class, 'index']);
-Route::get('/mg', [MoeilijkheidsgraadController::class, 'index']);
 Route::get('/routes', [RoutesController::class, 'index']);
 Route::get('/sa', [SoortenactiviteitenController::class, 'index']);
 

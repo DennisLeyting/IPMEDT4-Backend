@@ -17,12 +17,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             GebruikerTableSeeder::class,
-            MoeilijkheidsgraadTableSeeder::class,
             SoortenActiviteitenTableSeeder::class,
             RoutesTableSeeder::class,
             ActiviteitTableSeeder::class,
             CheckpointsTableSeeder::class,
-
         ]);
     }
 }
