@@ -28,6 +28,7 @@ Route::post('/create_route', 'App\Http\Controllers\RoutesController@addRoute');
 Route::get('/activiteit', [ActiviteitController::class, 'index']);
 Route::get('/gebruiker', [GebruikerController::class, 'index']);
 Route::get('/routes', [RoutesController::class, 'index']);
+Route::get('/checkpoints', [CheckpointController::class, 'index']);
 Route::get('/sa', [SoortenactiviteitenController::class, 'index']);
 
 Route::get('/{any}', function ($any) {

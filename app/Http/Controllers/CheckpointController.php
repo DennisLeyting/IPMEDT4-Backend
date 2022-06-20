@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Checkpoint;
 
 class CheckpointController extends Controller
 {
+    public function index(){
+        return Checkpoint::all();
+    }
     public function addCheckpoint(Request $request) {
 
         // verander deze waardes op basis van je eigen informatie
