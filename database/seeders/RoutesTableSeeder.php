@@ -16,8 +16,8 @@ class RoutesTableSeeder extends Seeder
     public function run()
     {
         DB::table('routes')->insert([
-            'routename' => 'Hoofddorp',
-            'regio' => 'Centrum'
+            'routename' => 'Centrum',
+            'regio' => 'Hoofddorp'
         ]);
     }
 }
