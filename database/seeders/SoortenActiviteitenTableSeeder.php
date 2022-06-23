@@ -24,7 +24,7 @@ class SoortenActiviteitenTableSeeder extends Seeder
             'beschrijving' => 'Dit is een activiteit waar je een fysieke opdracht doet, bijvoorbeeld een handstand.',]);
 
         DB::table('soorten_activiteiten')->insert([
-            'naam' => 'commentaar',
+            'naam' => 'comment',
             'beschrijving' => 'Dit is een activiteit waar je een commentaar kan plaatsen. Dit is vooral nuttig in bijvoorbeeld een educatieve omgeving.',]);
 
         DB::table('soorten_activiteiten')->insert([
