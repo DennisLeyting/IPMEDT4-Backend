@@ -20,6 +20,7 @@ class CreateCheckpointsTable extends Migration
             $table->string('longitude');
             $table->string('activity_title');
             $table->string('activity_header');
+            $table->string('activity_awnser');
         });
     }
 

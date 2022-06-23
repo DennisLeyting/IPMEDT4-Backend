@@ -33,16 +33,18 @@ class CheckpointController extends Controller
             latitude,
             longitude,
             activity_title,
-            activity_header
+            activity_header,
+            activity_awnser
 
-        ) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", 
+        ) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssss", 
             $routename, 
             $pointnumber,
             $latitude,
             $longitude,
             $activity_title,
-            $activity_header
+            $activity_header,
+            $activity_awnser
         );
 
         $routename = $request->input('routename');
@@ -51,6 +53,7 @@ class CheckpointController extends Controller
         $longitude = $request->input('longitude');
         $activity_title = $request->input('activity_title');
         $activity_header = $request->input('activity_header');
+        $activity_awnser = $request->input('activity_awnser');
 
         $stmt->execute();
 
